@@ -15,16 +15,26 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
-        backgroundColor: Colors.purple,
+        //backgroundColor: Colors.black,
         appBar: AppBar(
           centerTitle: true,
           title: const Text("Quiz Game"),
         ),
-        body: const SafeArea(
-          child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 10.0),
-            child: QuizPage(),
+        body: Container(height: double.infinity,
+          width: double.infinity,
+          decoration: const BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage('assets/images/img.png'),
+              fit: BoxFit.cover,
+            ),
+          ),
+          child: const SafeArea(
+            child: Padding(
+              padding: EdgeInsets.symmetric(horizontal: 10.0),
+              child: QuizPage(),
+            ),
           ),
         ),
       ),
@@ -81,25 +91,6 @@ class _QuizPageState extends State<QuizPage> {
     });
   }
 
-  // List<String> questions = [
-  //   'You can lead a cow down stairs but not up stairs.',
-  //   'Approximately one quarter of human bones are in the feet.',
-  //   'A slug\'s blood is green.',
-  //
-  // ];
-  //
-  // Question q1 = Question(q:'You can lead a cow down stairs but not up stairs.', a:false);
-
-  // List<Question> questionBank = [
-  //   Question(q: 'You can lead a cow down stairs but not up stairs.', a: false),
-  //   Question(
-  //       q: 'Approximately one quarter of human bones are in the feet.',
-  //       a: true),
-  //   Question(q: 'A slug\'s blood is green.', a: true),
-  // ];
-
-  // List<bool> answers = [false, true, true];
-  // late int questionNumber = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -132,7 +123,7 @@ class _QuizPageState extends State<QuizPage> {
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(20),
                 ),
-                backgroundColor: Colors.blue,
+                backgroundColor: Colors.green,
                 // side: MaterialStateProperty.all<Border>(Border.all(width: 20))
               ),
               child: const Text(
@@ -149,6 +140,7 @@ class _QuizPageState extends State<QuizPage> {
             ),
           ),
         ),
+        SizedBox(height: 10,),
         Expanded(
           child: Padding(
             padding: const EdgeInsets.all(15.0),
@@ -175,6 +167,7 @@ class _QuizPageState extends State<QuizPage> {
             ),
           ),
         ),
+        SizedBox(height: 10,),
         Row(
          // crossAxisAlignment: CrossAxisAlignment.center,
           children: scoreKeeper,

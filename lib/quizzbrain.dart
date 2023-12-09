@@ -4,31 +4,20 @@ class QuizBrain{
   // here we make the questionBank instance to private
   int _questionNumber = 0;
   final List<Question> _questionBank = [
-    Question('Some cats are actually allergic to humans', true),
-    Question('You can lead a cow down stairs but not up stairs.', false),
-    Question('Approximately one quarter of human bones are in the feet.', true),
-    Question('A slug\'s blood is green.', true),
-    Question('Buzz Aldrin\'s mother\'s maiden name was Moon.', true),
-    Question('It is illegal to pee in the Ocean in Portugal.', true),
-    Question(
-        'No piece of square dry paper can be folded in half more than 7 times.',
-        false),
-    Question(
-        'In London, UK, if you happen to die in the House of Parliament, you are technically entitled to a state funeral, because the building is considered too sacred a place.',
-        true),
-    Question(
-        'The loudest sound produced by any animal is 188 decibels. That animal is the African Elephant.',
-        false),
-    Question(
-        'The total surface area of two human lungs is approximately 70 square metres.',
-        true),
-    Question('Google was originally called Backrub .', true),
-    Question(
-        'Chocolate affects a dog\'s heart and nervous system; a few ounces are enough to kill a small dog.',
-        true),
-    Question(
-        'In West Virginia, USA, if you accidentally hit an animal with your car, you are free to take it home to eat.',
-        true),
+    Question('Dart\'s break statement is used to exit a loop.', true),
+    Question('Dart\'s double type is used for representing integers.', false),
+    Question('Dart is a compiled language.', true),
+    Question('Flutter uses Java for app development.', false),
+    Question('Dart is an object-oriented programming language.', true),
+    Question('Flutter is developed by Facebook.', false),
+    Question(' Flutter supports only Android app development.', false),
+    Question('Dart\'s bool type is used for representing String.', false),
+    Question(' The "pubspec.yaml" file is used to declare dependencies in a Flutter project.', true),
+    Question('Stateless widgets can change their internal state during the widget\'s lifetime.', false),
+    Question('Hot Reload allows developers to see the changes in the app instantly without restarting.', true),
+    Question('Flutter is a web development framework.', false ),
+    Question(' The statement "StatefulWidget is used for widgets that can change dynamically',true ),
+    Question('Single inheritance is a fundamental concept in object-oriented programming.',true ),
 
   ];
 
